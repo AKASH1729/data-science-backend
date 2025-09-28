@@ -1,0 +1,13 @@
+
+services:
+  - type: web
+    name: prism-data-science-backend
+    env: node
+    plan: starter
+    rootDir: .               # important: use repo root, not src
+    buildCommand: "yarn install && yarn build"
+    startCommand: "yarn start"
+    autoDeploy: true
+    envVars:
+      - key: NODE_ENV
+        value: production
